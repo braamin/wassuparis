@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		5B89B2C821FF175A00B20013 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89B2C721FF175A00B20013 /* AppDelegate.swift */; };
-		5B89B2CA21FF175A00B20013 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89B2C921FF175A00B20013 /* ViewController.swift */; };
 		5B89B2CD21FF175A00B20013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B89B2CB21FF175A00B20013 /* Main.storyboard */; };
 		5B89B2CF21FF175C00B20013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B89B2CE21FF175C00B20013 /* Assets.xcassets */; };
 		5B89B2D221FF175C00B20013 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B89B2D021FF175C00B20013 /* LaunchScreen.storyboard */; };
 		5B89B2DD21FF175C00B20013 /* Wassup_ParisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89B2DC21FF175C00B20013 /* Wassup_ParisTests.swift */; };
 		5B89B2E821FF175C00B20013 /* Wassup_ParisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89B2E721FF175C00B20013 /* Wassup_ParisUITests.swift */; };
+		5B89B30721FF4E6600B20013 /* EventsDatasource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89B30621FF4E6600B20013 /* EventsDatasource.swift */; };
+		5B89B30B21FF4E7700B20013 /* EventsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89B30921FF4E7700B20013 /* EventsListVC.swift */; };
+		5B89B30F21FF4EB100B20013 /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B89B30D21FF4EB100B20013 /* EventCell.xib */; };
+		5B89B31021FF4EB100B20013 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89B30E21FF4EB100B20013 /* EventCell.swift */; };
+		5B9994AC21FF573E00077D2D /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9994AB21FF573E00077D2D /* Structures.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,6 @@
 /* Begin PBXFileReference section */
 		5B89B2C421FF175A00B20013 /* Wassup Paris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wassup Paris.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B89B2C721FF175A00B20013 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5B89B2C921FF175A00B20013 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		5B89B2CC21FF175A00B20013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5B89B2CE21FF175C00B20013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5B89B2D121FF175C00B20013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +50,11 @@
 		5B89B2E321FF175C00B20013 /* Wassup ParisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wassup ParisUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B89B2E721FF175C00B20013 /* Wassup_ParisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wassup_ParisUITests.swift; sourceTree = "<group>"; };
 		5B89B2E921FF175C00B20013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B89B30621FF4E6600B20013 /* EventsDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsDatasource.swift; path = "Wassup Paris/Datasources/EventsDatasource.swift"; sourceTree = SOURCE_ROOT; };
+		5B89B30921FF4E7700B20013 /* EventsListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsListVC.swift; path = "Wassup Paris/VC/EventsListVC.swift"; sourceTree = SOURCE_ROOT; };
+		5B89B30D21FF4EB100B20013 /* EventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventCell.xib; path = "Wassup Paris/Cells/EventCell.xib"; sourceTree = SOURCE_ROOT; };
+		5B89B30E21FF4EB100B20013 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventCell.swift; path = "Wassup Paris/Cells/EventCell.swift"; sourceTree = SOURCE_ROOT; };
+		5B9994AB21FF573E00077D2D /* Structures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,10 +106,12 @@
 			isa = PBXGroup;
 			children = (
 				5B89B2C721FF175A00B20013 /* AppDelegate.swift */,
-				5B89B2C921FF175A00B20013 /* ViewController.swift */,
-				5B89B2CB21FF175A00B20013 /* Main.storyboard */,
+				5B9994A921FF4FA300077D2D /* Storyboards */,
+				5B89B30121FF4D1A00B20013 /* VC */,
+				5B89B30221FF4D3A00B20013 /* Datasources */,
+				5B89B30C21FF4E8E00B20013 /* Cells */,
+				5B9994AA21FF572000077D2D /* Structures */,
 				5B89B2CE21FF175C00B20013 /* Assets.xcassets */,
-				5B89B2D021FF175C00B20013 /* LaunchScreen.storyboard */,
 				5B89B2D321FF175C00B20013 /* Info.plist */,
 			);
 			path = "Wassup Paris";
@@ -123,6 +133,48 @@
 				5B89B2E921FF175C00B20013 /* Info.plist */,
 			);
 			path = "Wassup ParisUITests";
+			sourceTree = "<group>";
+		};
+		5B89B30121FF4D1A00B20013 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				5B89B30921FF4E7700B20013 /* EventsListVC.swift */,
+			);
+			path = VC;
+			sourceTree = "<group>";
+		};
+		5B89B30221FF4D3A00B20013 /* Datasources */ = {
+			isa = PBXGroup;
+			children = (
+				5B89B30621FF4E6600B20013 /* EventsDatasource.swift */,
+			);
+			path = Datasources;
+			sourceTree = "<group>";
+		};
+		5B89B30C21FF4E8E00B20013 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				5B89B30E21FF4EB100B20013 /* EventCell.swift */,
+				5B89B30D21FF4EB100B20013 /* EventCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		5B9994A921FF4FA300077D2D /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				5B89B2D021FF175C00B20013 /* LaunchScreen.storyboard */,
+				5B89B2CB21FF175A00B20013 /* Main.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		5B9994AA21FF572000077D2D /* Structures */ = {
+			isa = PBXGroup;
+			children = (
+				5B9994AB21FF573E00077D2D /* Structures.swift */,
+			);
+			path = Structures;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -229,6 +281,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B89B30F21FF4EB100B20013 /* EventCell.xib in Resources */,
 				5B89B2D221FF175C00B20013 /* LaunchScreen.storyboard in Resources */,
 				5B89B2CF21FF175C00B20013 /* Assets.xcassets in Resources */,
 				5B89B2CD21FF175A00B20013 /* Main.storyboard in Resources */,
@@ -256,7 +309,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B89B2CA21FF175A00B20013 /* ViewController.swift in Sources */,
+				5B89B30721FF4E6600B20013 /* EventsDatasource.swift in Sources */,
+				5B89B30B21FF4E7700B20013 /* EventsListVC.swift in Sources */,
+				5B9994AC21FF573E00077D2D /* Structures.swift in Sources */,
+				5B89B31021FF4EB100B20013 /* EventCell.swift in Sources */,
 				5B89B2C821FF175A00B20013 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
