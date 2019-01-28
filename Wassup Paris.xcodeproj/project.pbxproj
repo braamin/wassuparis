@@ -1,0 +1,591 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5B89B2C821FF175A00B20013 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89B2C721FF175A00B20013 /* AppDelegate.swift */; };
+		5B89B2CA21FF175A00B20013 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89B2C921FF175A00B20013 /* ViewController.swift */; };
+		5B89B2CD21FF175A00B20013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B89B2CB21FF175A00B20013 /* Main.storyboard */; };
+		5B89B2CF21FF175C00B20013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B89B2CE21FF175C00B20013 /* Assets.xcassets */; };
+		5B89B2D221FF175C00B20013 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B89B2D021FF175C00B20013 /* LaunchScreen.storyboard */; };
+		5B89B2DD21FF175C00B20013 /* Wassup_ParisTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89B2DC21FF175C00B20013 /* Wassup_ParisTests.swift */; };
+		5B89B2E821FF175C00B20013 /* Wassup_ParisUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89B2E721FF175C00B20013 /* Wassup_ParisUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5B89B2D921FF175C00B20013 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B89B2BC21FF175A00B20013 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B89B2C321FF175A00B20013;
+			remoteInfo = "Wassup Paris";
+		};
+		5B89B2E421FF175C00B20013 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5B89B2BC21FF175A00B20013 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5B89B2C321FF175A00B20013;
+			remoteInfo = "Wassup Paris";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5B89B2C421FF175A00B20013 /* Wassup Paris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wassup Paris.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B89B2C721FF175A00B20013 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5B89B2C921FF175A00B20013 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5B89B2CC21FF175A00B20013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5B89B2CE21FF175C00B20013 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5B89B2D121FF175C00B20013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5B89B2D321FF175C00B20013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B89B2D821FF175C00B20013 /* Wassup ParisTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wassup ParisTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B89B2DC21FF175C00B20013 /* Wassup_ParisTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wassup_ParisTests.swift; sourceTree = "<group>"; };
+		5B89B2DE21FF175C00B20013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B89B2E321FF175C00B20013 /* Wassup ParisUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Wassup ParisUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5B89B2E721FF175C00B20013 /* Wassup_ParisUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wassup_ParisUITests.swift; sourceTree = "<group>"; };
+		5B89B2E921FF175C00B20013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5B89B2C121FF175A00B20013 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B89B2D521FF175C00B20013 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B89B2E021FF175C00B20013 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5B89B2BB21FF175A00B20013 = {
+			isa = PBXGroup;
+			children = (
+				5B89B2C621FF175A00B20013 /* Wassup Paris */,
+				5B89B2DB21FF175C00B20013 /* Wassup ParisTests */,
+				5B89B2E621FF175C00B20013 /* Wassup ParisUITests */,
+				5B89B2C521FF175A00B20013 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5B89B2C521FF175A00B20013 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5B89B2C421FF175A00B20013 /* Wassup Paris.app */,
+				5B89B2D821FF175C00B20013 /* Wassup ParisTests.xctest */,
+				5B89B2E321FF175C00B20013 /* Wassup ParisUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5B89B2C621FF175A00B20013 /* Wassup Paris */ = {
+			isa = PBXGroup;
+			children = (
+				5B89B2C721FF175A00B20013 /* AppDelegate.swift */,
+				5B89B2C921FF175A00B20013 /* ViewController.swift */,
+				5B89B2CB21FF175A00B20013 /* Main.storyboard */,
+				5B89B2CE21FF175C00B20013 /* Assets.xcassets */,
+				5B89B2D021FF175C00B20013 /* LaunchScreen.storyboard */,
+				5B89B2D321FF175C00B20013 /* Info.plist */,
+			);
+			path = "Wassup Paris";
+			sourceTree = "<group>";
+		};
+		5B89B2DB21FF175C00B20013 /* Wassup ParisTests */ = {
+			isa = PBXGroup;
+			children = (
+				5B89B2DC21FF175C00B20013 /* Wassup_ParisTests.swift */,
+				5B89B2DE21FF175C00B20013 /* Info.plist */,
+			);
+			path = "Wassup ParisTests";
+			sourceTree = "<group>";
+		};
+		5B89B2E621FF175C00B20013 /* Wassup ParisUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5B89B2E721FF175C00B20013 /* Wassup_ParisUITests.swift */,
+				5B89B2E921FF175C00B20013 /* Info.plist */,
+			);
+			path = "Wassup ParisUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5B89B2C321FF175A00B20013 /* Wassup Paris */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B89B2EC21FF175C00B20013 /* Build configuration list for PBXNativeTarget "Wassup Paris" */;
+			buildPhases = (
+				5B89B2C021FF175A00B20013 /* Sources */,
+				5B89B2C121FF175A00B20013 /* Frameworks */,
+				5B89B2C221FF175A00B20013 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Wassup Paris";
+			productName = "Wassup Paris";
+			productReference = 5B89B2C421FF175A00B20013 /* Wassup Paris.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5B89B2D721FF175C00B20013 /* Wassup ParisTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B89B2EF21FF175C00B20013 /* Build configuration list for PBXNativeTarget "Wassup ParisTests" */;
+			buildPhases = (
+				5B89B2D421FF175C00B20013 /* Sources */,
+				5B89B2D521FF175C00B20013 /* Frameworks */,
+				5B89B2D621FF175C00B20013 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B89B2DA21FF175C00B20013 /* PBXTargetDependency */,
+			);
+			name = "Wassup ParisTests";
+			productName = "Wassup ParisTests";
+			productReference = 5B89B2D821FF175C00B20013 /* Wassup ParisTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5B89B2E221FF175C00B20013 /* Wassup ParisUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5B89B2F221FF175C00B20013 /* Build configuration list for PBXNativeTarget "Wassup ParisUITests" */;
+			buildPhases = (
+				5B89B2DF21FF175C00B20013 /* Sources */,
+				5B89B2E021FF175C00B20013 /* Frameworks */,
+				5B89B2E121FF175C00B20013 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5B89B2E521FF175C00B20013 /* PBXTargetDependency */,
+			);
+			name = "Wassup ParisUITests";
+			productName = "Wassup ParisUITests";
+			productReference = 5B89B2E321FF175C00B20013 /* Wassup ParisUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5B89B2BC21FF175A00B20013 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = braminstudio;
+				TargetAttributes = {
+					5B89B2C321FF175A00B20013 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					5B89B2D721FF175C00B20013 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 5B89B2C321FF175A00B20013;
+					};
+					5B89B2E221FF175C00B20013 = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 5B89B2C321FF175A00B20013;
+					};
+				};
+			};
+			buildConfigurationList = 5B89B2BF21FF175A00B20013 /* Build configuration list for PBXProject "Wassup Paris" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5B89B2BB21FF175A00B20013;
+			productRefGroup = 5B89B2C521FF175A00B20013 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5B89B2C321FF175A00B20013 /* Wassup Paris */,
+				5B89B2D721FF175C00B20013 /* Wassup ParisTests */,
+				5B89B2E221FF175C00B20013 /* Wassup ParisUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5B89B2C221FF175A00B20013 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B89B2D221FF175C00B20013 /* LaunchScreen.storyboard in Resources */,
+				5B89B2CF21FF175C00B20013 /* Assets.xcassets in Resources */,
+				5B89B2CD21FF175A00B20013 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B89B2D621FF175C00B20013 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B89B2E121FF175C00B20013 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5B89B2C021FF175A00B20013 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B89B2CA21FF175A00B20013 /* ViewController.swift in Sources */,
+				5B89B2C821FF175A00B20013 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B89B2D421FF175C00B20013 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B89B2DD21FF175C00B20013 /* Wassup_ParisTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5B89B2DF21FF175C00B20013 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5B89B2E821FF175C00B20013 /* Wassup_ParisUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5B89B2DA21FF175C00B20013 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B89B2C321FF175A00B20013 /* Wassup Paris */;
+			targetProxy = 5B89B2D921FF175C00B20013 /* PBXContainerItemProxy */;
+		};
+		5B89B2E521FF175C00B20013 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5B89B2C321FF175A00B20013 /* Wassup Paris */;
+			targetProxy = 5B89B2E421FF175C00B20013 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5B89B2CB21FF175A00B20013 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B89B2CC21FF175A00B20013 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5B89B2D021FF175C00B20013 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5B89B2D121FF175C00B20013 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5B89B2EA21FF175C00B20013 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5B89B2EB21FF175C00B20013 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5B89B2ED21FF175C00B20013 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EM9P8H6H4E;
+				INFOPLIST_FILE = "Wassup Paris/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "braminstudio.Wassup-Paris";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5B89B2EE21FF175C00B20013 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EM9P8H6H4E;
+				INFOPLIST_FILE = "Wassup Paris/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "braminstudio.Wassup-Paris";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5B89B2F021FF175C00B20013 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EM9P8H6H4E;
+				INFOPLIST_FILE = "Wassup ParisTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "braminstudio.Wassup-ParisTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wassup Paris.app/Wassup Paris";
+			};
+			name = Debug;
+		};
+		5B89B2F121FF175C00B20013 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EM9P8H6H4E;
+				INFOPLIST_FILE = "Wassup ParisTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "braminstudio.Wassup-ParisTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Wassup Paris.app/Wassup Paris";
+			};
+			name = Release;
+		};
+		5B89B2F321FF175C00B20013 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EM9P8H6H4E;
+				INFOPLIST_FILE = "Wassup ParisUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "braminstudio.Wassup-ParisUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Wassup Paris";
+			};
+			name = Debug;
+		};
+		5B89B2F421FF175C00B20013 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = EM9P8H6H4E;
+				INFOPLIST_FILE = "Wassup ParisUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "braminstudio.Wassup-ParisUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Wassup Paris";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5B89B2BF21FF175A00B20013 /* Build configuration list for PBXProject "Wassup Paris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B89B2EA21FF175C00B20013 /* Debug */,
+				5B89B2EB21FF175C00B20013 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B89B2EC21FF175C00B20013 /* Build configuration list for PBXNativeTarget "Wassup Paris" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B89B2ED21FF175C00B20013 /* Debug */,
+				5B89B2EE21FF175C00B20013 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B89B2EF21FF175C00B20013 /* Build configuration list for PBXNativeTarget "Wassup ParisTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B89B2F021FF175C00B20013 /* Debug */,
+				5B89B2F121FF175C00B20013 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5B89B2F221FF175C00B20013 /* Build configuration list for PBXNativeTarget "Wassup ParisUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5B89B2F321FF175C00B20013 /* Debug */,
+				5B89B2F421FF175C00B20013 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5B89B2BC21FF175A00B20013 /* Project object */;
+}
