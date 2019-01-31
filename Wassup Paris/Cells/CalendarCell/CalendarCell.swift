@@ -7,9 +7,12 @@
 //
 
 import UIKit
+import JTAppleCalendar
 
 class CalendarCell: JTAppleCell {
-
+    @IBOutlet weak var cellLabel: UILabel!
+    @IBOutlet weak var selectedView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
