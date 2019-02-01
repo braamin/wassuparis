@@ -66,6 +66,7 @@ class EventsDatasource: NSObject {
         
         urlParam.start = _atInit ? 0 : urlParam.start
         
+        // filling up the url parameters' array
         queryItemsArray.append(URLQueryItem(name: "dataset", value: urlParam.dataset))
         queryItemsArray.append(URLQueryItem(name: "rows", value: String(urlParam.rows)))
         queryItemsArray.append(URLQueryItem(name: "sort", value: String(urlParam.sort.direction.description) + String(urlParam.sort.by.description)))
@@ -104,6 +105,7 @@ extension EventsDatasource: UITableViewDataSource{
         
         cell.event = event
         
+        // Triggered requesting data function when you DID reach the table view's bottom
         if indexPath.row == eventList.count - 1 {
             if let _ = delegate {
                 delegate?.getMoreData()

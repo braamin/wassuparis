@@ -200,6 +200,7 @@ struct UrlParamManager {
         dateEndFilter = DateFilter(_filterType: .end)
     }
     
+    // Update Sorting
     mutating func update(for _by:Int, _direction: Int){
         switch _by {
         case 0:
@@ -219,6 +220,7 @@ struct UrlParamManager {
         }
     }
     
+    // Update date filtering
     mutating func update(for _filterType: DateFilterType, with _dateInterval: DateInterval, at _date:Date){
         switch _filterType {
         case .start:
@@ -232,10 +234,12 @@ struct UrlParamManager {
         }
     }
     
+    // Update number of rows to get
     mutating func getMoreData(){
         start += 10
     }
     
+    // Get date filter string for URL
     func getDateFiltersString() -> String {
         if dateStartFilter.isSet && dateEndFilter.isSet {
             return dateStartFilter.getDateFilterString() + " and " + dateEndFilter.getDateFilterString()

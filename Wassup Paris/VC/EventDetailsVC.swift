@@ -31,6 +31,7 @@ class EventDetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Updating the view with the event's data
         if let _ = event {
             titleLabel.text = event?.fields.title
             addressLabel.text = event?.fields.address

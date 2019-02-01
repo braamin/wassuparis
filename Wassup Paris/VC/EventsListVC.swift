@@ -40,21 +40,24 @@ class EventsListVC: UIViewController {
     }
     
     @IBAction func onSortFieldsClick(_ sender: Any){
+        // Update parameters' structure at click on segmented control from sorting view
         eventsDatasource?.updateParam(for: SortFieldsSegmentedControl.selectedSegmentIndex, _direction: SortBySegmentedControl.selectedSegmentIndex)
-        
+        // Update tableview according to parameters' update
         updateTableView(_atInit: true)
     }
     
     @IBAction func onEditDateFilterButtonClick(_ sender: Any) {
+        // Instantiating the calendar popover
         let datePopover = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CalendarVC") as! CalendarVC
         datePopover.delegate = self
-        datePopover.selectedDate = eventsDatasource?.urlParam.dateEndFilter.referenceDate
+        datePopover.selectedDate = eventsDatasource?.urlParam.dateStartFilter.referenceDate
         datePopover.modalPresentationStyle = .overCurrentContext
         datePopover.modalTransitionStyle = .crossDissolve
         self.present(datePopover, animated: true, completion: nil)
     }
     
     @IBAction func onEditFiltersButtonClick(_ sender: Any) {
+        // Toggle animation for toggling sorting view
         self.SortingTopConstraint.constant = self.SortingTopConstraint.constant == 0 ? -60 : 0
         UIView.animate(withDuration: 0.4, animations: {
             self.view.layoutIfNeeded()
@@ -62,10 +65,12 @@ class EventsListVC: UIViewController {
     }
     
     func updateTableView(_atInit: Bool){
+        // Asynchronous request on datasource (controller) to get new data. The "_atInit" variable is design to block table data reset on requesting for more data (at bottom scroll)
         eventsDatasource!.getEvents(_atInit: _atInit){ (result) in
             switch result {
             case .success(let eventsDataset):
                 self.EventsCountLabel.text = String(eventsDataset.nhits) + " résultat(s)"
+                self.nhits = eventsDataset.nhits
                 self.EventsTableView.reloadData()
             case .failure(let error):
                 fatalError(error.localizedDescription)
@@ -79,6 +84,7 @@ extension EventsListVC: UITableViewDelegate{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let cell = tableView.cellForRow(at: indexPath) as? EventCell else { return }
         
+        // Zooming In animation on table view cell
         UIView.animate(withDuration: 0.2, animations: {
             cell.EventInfosView.alpha = 0
         }, completion: { (disappeared) in
@@ -112,6 +118,8 @@ extension EventsListVC: UITableViewDelegate{
 }
 
 extension EventsListVC: AnimatedCellNavigationDelegate {
+    
+    //Zooming Out animation on table view cell
     func willGoBack() {
         UIView.animate(withDuration: 0.4, animations: {
             guard self.zoomTransitionManager != nil else {return}
@@ -128,6 +136,8 @@ extension EventsListVC: AnimatedCellNavigationDelegate {
 }
 
 extension EventsListVC: GetMoreDataDelegate {
+    
+    // Protocol to get more data at bottom scroll
     func getMoreData() {
         if let _ = nhits, let _ = eventsDatasource {
             if(eventsDatasource!.eventList.count < nhits!){
@@ -139,6 +149,8 @@ extension EventsListVC: GetMoreDataDelegate {
 }
 
 extension EventsListVC: DateCallbackDelegate {
+    
+    // Protocole to set search parameter date to the calendar back value (and reset it if asked to do so)
     func setDate(for _tag: Int, at _date: Date) {
         switch _tag{
         case 0:
