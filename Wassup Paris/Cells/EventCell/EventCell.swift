@@ -15,9 +15,13 @@ class EventCell: UITableViewCell {
             EventNameLabel.text = event?.fields.title
             EventStartDayLabel.text = event?.fields.getTimeComponent(_timeComponent: .dayStart)
             EventStartMonthLabel.text = event?.fields.getTimeComponent(_timeComponent: .monthStart)
-            EventEndDayLabel.text = event?.fields.getTimeComponent(_timeComponent: .dayEnd)
-            EventEndMonthLabel.text = event?.fields.getTimeComponent(_timeComponent: .monthEnd)
+            EventStartYearLabel.text = event?.fields.getTimeComponent(_timeComponent: .yearStart)
             EventAddressLabel.text = event?.fields.address
+            if let url = event?.fields.imageUrl {
+                EventImageView.downloaded(from: url)
+            }else{
+                
+            }
         }
     }
     
@@ -26,9 +30,9 @@ class EventCell: UITableViewCell {
     @IBOutlet weak var EventAddressLabel: UILabel!
     @IBOutlet weak var EventStartDayLabel: UILabel!
     @IBOutlet weak var EventStartMonthLabel: UILabel!
-    @IBOutlet weak var EventEndDayLabel: UILabel!
-    @IBOutlet weak var EventEndMonthLabel: UILabel!
+    @IBOutlet weak var EventStartYearLabel: UILabel!
     @IBOutlet weak var EvenContainerView: UIView!
+    @IBOutlet weak var EventInfosView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

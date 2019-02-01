@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B68015B2201EF5000751903 /* CalendarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6801592201EF5000751903 /* CalendarCell.swift */; };
+		5B68015C2201EF5000751903 /* CalendarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B68015A2201EF5000751903 /* CalendarCell.xib */; };
+		5B68015E2201F4CC00751903 /* CalendarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68015D2201F4CC00751903 /* CalendarVC.swift */; };
+		5B6801602203128B00751903 /* Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B68015F2203128B00751903 /* Gradient.swift */; };
 		5B89B2C821FF175A00B20013 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89B2C721FF175A00B20013 /* AppDelegate.swift */; };
 		5B89B2CD21FF175A00B20013 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B89B2CB21FF175A00B20013 /* Main.storyboard */; };
 		5B89B2CF21FF175C00B20013 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5B89B2CE21FF175C00B20013 /* Assets.xcassets */; };
@@ -18,6 +22,12 @@
 		5B89B30F21FF4EB100B20013 /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B89B30D21FF4EB100B20013 /* EventCell.xib */; };
 		5B89B31021FF4EB100B20013 /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B89B30E21FF4EB100B20013 /* EventCell.swift */; };
 		5B9994AC21FF573E00077D2D /* Structures.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9994AB21FF573E00077D2D /* Structures.swift */; };
+		5B9994B02200684000077D2D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9994AF2200684000077D2D /* Extensions.swift */; };
+		5B9994B32201276C00077D2D /* EventDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9994B22201276C00077D2D /* EventDetailsVC.swift */; };
+		5B9994B522012BD300077D2D /* Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9994B422012BD300077D2D /* Protocols.swift */; };
+		682360DF50577F17A15CD5D8 /* Pods_Wassup_ParisTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D525DA10E0BDE88783959C2A /* Pods_Wassup_ParisTests.framework */; };
+		B16C11A7982B4FEB38C0D838 /* Pods_Wassup_ParisUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0C6BDAC710284A905092C29E /* Pods_Wassup_ParisUITests.framework */; };
+		F03EFBE7B6962D2A35594890 /* Pods_Wassup_Paris.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF04835F9A3579B904CD3B88 /* Pods_Wassup_Paris.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +48,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C6BDAC710284A905092C29E /* Pods_Wassup_ParisUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wassup_ParisUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		29D1BC7BCDFD6AB028A8E4DB /* Pods-Wassup Paris.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wassup Paris.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wassup Paris/Pods-Wassup Paris.release.xcconfig"; sourceTree = "<group>"; };
+		4248F91572BB40FE27C25C9C /* Pods-Wassup ParisUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wassup ParisUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wassup ParisUITests/Pods-Wassup ParisUITests.release.xcconfig"; sourceTree = "<group>"; };
+		4D31D7D8D2EFDB086D6492E2 /* Pods-Wassup ParisTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wassup ParisTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Wassup ParisTests/Pods-Wassup ParisTests.release.xcconfig"; sourceTree = "<group>"; };
+		5B6801592201EF5000751903 /* CalendarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarCell.swift; sourceTree = "<group>"; };
+		5B68015A2201EF5000751903 /* CalendarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CalendarCell.xib; sourceTree = "<group>"; };
+		5B68015D2201F4CC00751903 /* CalendarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarVC.swift; sourceTree = "<group>"; };
+		5B68015F2203128B00751903 /* Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gradient.swift; sourceTree = "<group>"; };
 		5B89B2C421FF175A00B20013 /* Wassup Paris.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Wassup Paris.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B89B2C721FF175A00B20013 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5B89B2CC21FF175A00B20013 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,9 +70,17 @@
 		5B89B2E921FF175C00B20013 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B89B30621FF4E6600B20013 /* EventsDatasource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsDatasource.swift; path = "Wassup Paris/Datasources/EventsDatasource.swift"; sourceTree = SOURCE_ROOT; };
 		5B89B30921FF4E7700B20013 /* EventsListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventsListVC.swift; path = "Wassup Paris/VC/EventsListVC.swift"; sourceTree = SOURCE_ROOT; };
-		5B89B30D21FF4EB100B20013 /* EventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventCell.xib; path = "Wassup Paris/Cells/EventCell.xib"; sourceTree = SOURCE_ROOT; };
-		5B89B30E21FF4EB100B20013 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventCell.swift; path = "Wassup Paris/Cells/EventCell.swift"; sourceTree = SOURCE_ROOT; };
+		5B89B30D21FF4EB100B20013 /* EventCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EventCell.xib; path = "Wassup Paris/Cells/EventCell/EventCell.xib"; sourceTree = SOURCE_ROOT; };
+		5B89B30E21FF4EB100B20013 /* EventCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventCell.swift; path = "Wassup Paris/Cells/EventCell/EventCell.swift"; sourceTree = SOURCE_ROOT; };
 		5B9994AB21FF573E00077D2D /* Structures.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structures.swift; sourceTree = "<group>"; };
+		5B9994AF2200684000077D2D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5B9994B22201276C00077D2D /* EventDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDetailsVC.swift; sourceTree = "<group>"; };
+		5B9994B422012BD300077D2D /* Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Protocols.swift; sourceTree = "<group>"; };
+		9935C9E2CFFE0E3EA3F9B8F1 /* Pods-Wassup ParisUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wassup ParisUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wassup ParisUITests/Pods-Wassup ParisUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		BF04835F9A3579B904CD3B88 /* Pods_Wassup_Paris.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wassup_Paris.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4CCC20FFBD6B43D17648A63 /* Pods-Wassup Paris.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wassup Paris.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wassup Paris/Pods-Wassup Paris.debug.xcconfig"; sourceTree = "<group>"; };
+		D525DA10E0BDE88783959C2A /* Pods_Wassup_ParisTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Wassup_ParisTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EE18F951156BCD003B6B0646 /* Pods-Wassup ParisTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Wassup ParisTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Wassup ParisTests/Pods-Wassup ParisTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F03EFBE7B6962D2A35594890 /* Pods_Wassup_Paris.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -69,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				682360DF50577F17A15CD5D8 /* Pods_Wassup_ParisTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,12 +104,22 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B16C11A7982B4FEB38C0D838 /* Pods_Wassup_ParisUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B7CF239220321B900FF551E /* CalendarCell */ = {
+			isa = PBXGroup;
+			children = (
+				5B6801592201EF5000751903 /* CalendarCell.swift */,
+				5B68015A2201EF5000751903 /* CalendarCell.xib */,
+			);
+			path = CalendarCell;
+			sourceTree = "<group>";
+		};
 		5B89B2BB21FF175A00B20013 = {
 			isa = PBXGroup;
 			children = (
@@ -89,6 +127,8 @@
 				5B89B2DB21FF175C00B20013 /* Wassup ParisTests */,
 				5B89B2E621FF175C00B20013 /* Wassup ParisUITests */,
 				5B89B2C521FF175A00B20013 /* Products */,
+				C820F3F8441FD4D27FA04191 /* Pods */,
+				B0A3D6D474D5142915276D37 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,6 +153,7 @@
 				5B9994AA21FF572000077D2D /* Structures */,
 				5B89B2CE21FF175C00B20013 /* Assets.xcassets */,
 				5B89B2D321FF175C00B20013 /* Info.plist */,
+				5B9994B12200684300077D2D /* Misc */,
 			);
 			path = "Wassup Paris";
 			sourceTree = "<group>";
@@ -139,6 +180,8 @@
 			isa = PBXGroup;
 			children = (
 				5B89B30921FF4E7700B20013 /* EventsListVC.swift */,
+				5B9994B22201276C00077D2D /* EventDetailsVC.swift */,
+				5B68015D2201F4CC00751903 /* CalendarVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -154,8 +197,8 @@
 		5B89B30C21FF4E8E00B20013 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				5B89B30E21FF4EB100B20013 /* EventCell.swift */,
-				5B89B30D21FF4EB100B20013 /* EventCell.xib */,
+				5B9994B62201E90200077D2D /* EventCell */,
+				5B7CF239220321B900FF551E /* CalendarCell */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -177,6 +220,48 @@
 			path = Structures;
 			sourceTree = "<group>";
 		};
+		5B9994B12200684300077D2D /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				5B9994AF2200684000077D2D /* Extensions.swift */,
+				5B9994B422012BD300077D2D /* Protocols.swift */,
+				5B68015F2203128B00751903 /* Gradient.swift */,
+			);
+			path = Misc;
+			sourceTree = "<group>";
+		};
+		5B9994B62201E90200077D2D /* EventCell */ = {
+			isa = PBXGroup;
+			children = (
+				5B89B30E21FF4EB100B20013 /* EventCell.swift */,
+				5B89B30D21FF4EB100B20013 /* EventCell.xib */,
+			);
+			path = EventCell;
+			sourceTree = "<group>";
+		};
+		B0A3D6D474D5142915276D37 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF04835F9A3579B904CD3B88 /* Pods_Wassup_Paris.framework */,
+				D525DA10E0BDE88783959C2A /* Pods_Wassup_ParisTests.framework */,
+				0C6BDAC710284A905092C29E /* Pods_Wassup_ParisUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C820F3F8441FD4D27FA04191 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D4CCC20FFBD6B43D17648A63 /* Pods-Wassup Paris.debug.xcconfig */,
+				29D1BC7BCDFD6AB028A8E4DB /* Pods-Wassup Paris.release.xcconfig */,
+				EE18F951156BCD003B6B0646 /* Pods-Wassup ParisTests.debug.xcconfig */,
+				4D31D7D8D2EFDB086D6492E2 /* Pods-Wassup ParisTests.release.xcconfig */,
+				9935C9E2CFFE0E3EA3F9B8F1 /* Pods-Wassup ParisUITests.debug.xcconfig */,
+				4248F91572BB40FE27C25C9C /* Pods-Wassup ParisUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -184,9 +269,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B89B2EC21FF175C00B20013 /* Build configuration list for PBXNativeTarget "Wassup Paris" */;
 			buildPhases = (
+				2B1BF1F98B91B2430C4C5490 /* [CP] Check Pods Manifest.lock */,
 				5B89B2C021FF175A00B20013 /* Sources */,
 				5B89B2C121FF175A00B20013 /* Frameworks */,
 				5B89B2C221FF175A00B20013 /* Resources */,
+				E68DB7BD9FD79FC6AA9B8503 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -201,6 +288,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B89B2EF21FF175C00B20013 /* Build configuration list for PBXNativeTarget "Wassup ParisTests" */;
 			buildPhases = (
+				B0D6926D841BFF3FB655ED23 /* [CP] Check Pods Manifest.lock */,
 				5B89B2D421FF175C00B20013 /* Sources */,
 				5B89B2D521FF175C00B20013 /* Frameworks */,
 				5B89B2D621FF175C00B20013 /* Resources */,
@@ -219,6 +307,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5B89B2F221FF175C00B20013 /* Build configuration list for PBXNativeTarget "Wassup ParisUITests" */;
 			buildPhases = (
+				C338E6B98E9911CB96F63AC1 /* [CP] Check Pods Manifest.lock */,
 				5B89B2DF21FF175C00B20013 /* Sources */,
 				5B89B2E021FF175C00B20013 /* Frameworks */,
 				5B89B2E121FF175C00B20013 /* Resources */,
@@ -285,6 +374,7 @@
 				5B89B2D221FF175C00B20013 /* LaunchScreen.storyboard in Resources */,
 				5B89B2CF21FF175C00B20013 /* Assets.xcassets in Resources */,
 				5B89B2CD21FF175A00B20013 /* Main.storyboard in Resources */,
+				5B68015C2201EF5000751903 /* CalendarCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,16 +394,97 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2B1BF1F98B91B2430C4C5490 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wassup Paris-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B0D6926D841BFF3FB655ED23 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wassup ParisTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C338E6B98E9911CB96F63AC1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Wassup ParisUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E68DB7BD9FD79FC6AA9B8503 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Wassup Paris/Pods-Wassup Paris-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/JTAppleCalendar/JTAppleCalendar.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JTAppleCalendar.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Wassup Paris/Pods-Wassup Paris-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5B89B2C021FF175A00B20013 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5B89B30721FF4E6600B20013 /* EventsDatasource.swift in Sources */,
+				5B9994B02200684000077D2D /* Extensions.swift in Sources */,
 				5B89B30B21FF4E7700B20013 /* EventsListVC.swift in Sources */,
 				5B9994AC21FF573E00077D2D /* Structures.swift in Sources */,
+				5B68015B2201EF5000751903 /* CalendarCell.swift in Sources */,
 				5B89B31021FF4EB100B20013 /* EventCell.swift in Sources */,
+				5B9994B32201276C00077D2D /* EventDetailsVC.swift in Sources */,
 				5B89B2C821FF175A00B20013 /* AppDelegate.swift in Sources */,
+				5B6801602203128B00751903 /* Gradient.swift in Sources */,
+				5B9994B522012BD300077D2D /* Protocols.swift in Sources */,
+				5B68015E2201F4CC00751903 /* CalendarVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,11 +657,13 @@
 		};
 		5B89B2ED21FF175C00B20013 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D4CCC20FFBD6B43D17648A63 /* Pods-Wassup Paris.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EM9P8H6H4E;
 				INFOPLIST_FILE = "Wassup Paris/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -504,11 +677,13 @@
 		};
 		5B89B2EE21FF175C00B20013 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 29D1BC7BCDFD6AB028A8E4DB /* Pods-Wassup Paris.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = EM9P8H6H4E;
 				INFOPLIST_FILE = "Wassup Paris/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -522,6 +697,7 @@
 		};
 		5B89B2F021FF175C00B20013 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EE18F951156BCD003B6B0646 /* Pods-Wassup ParisTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -543,6 +719,7 @@
 		};
 		5B89B2F121FF175C00B20013 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4D31D7D8D2EFDB086D6492E2 /* Pods-Wassup ParisTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -564,6 +741,7 @@
 		};
 		5B89B2F321FF175C00B20013 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9935C9E2CFFE0E3EA3F9B8F1 /* Pods-Wassup ParisUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -584,6 +762,7 @@
 		};
 		5B89B2F421FF175C00B20013 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4248F91572BB40FE27C25C9C /* Pods-Wassup ParisUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

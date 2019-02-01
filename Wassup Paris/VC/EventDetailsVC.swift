@@ -9,22 +9,50 @@
 import UIKit
 
 class EventDetailsVC: UIViewController {
+    
+    var delegate: AnimatedCellNavigationDelegate?
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var dayStartLabel: UILabel!
+    @IBOutlet weak var monthStartLabel: UILabel!
+    @IBOutlet weak var yearStartLabel: UILabel!
+    @IBOutlet weak var dayEndLabel: UILabel!
+    @IBOutlet weak var monthEndLabel: UILabel!
+    @IBOutlet weak var yearEndLabel: UILabel!
+    @IBOutlet weak var descriptionTextView: UITextView!
+    @IBOutlet weak var eventImageView: UIImageView!
+    @IBOutlet weak var eventTagsLabel: UILabel!
+    
+    var eventImage: UIImageView?
+    
+    var event: EventsDataset.Event?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        if let _ = event {
+            titleLabel.text = event?.fields.title
+            addressLabel.text = event?.fields.address
+            dayStartLabel.text = event?.fields.getTimeComponent(_timeComponent: .dayStart)
+            monthStartLabel.text = event?.fields.getTimeComponent(_timeComponent: .monthStart)
+            yearStartLabel.text = event?.fields.getTimeComponent(_timeComponent: .yearStart)
+            dayEndLabel.text = event?.fields.getTimeComponent(_timeComponent: .dayEnd)
+            monthEndLabel.text = event?.fields.getTimeComponent(_timeComponent: .monthEnd)
+            yearEndLabel.text = event?.fields.getTimeComponent(_timeComponent: .yearEnd)
+            eventTagsLabel.text = event?.fields.tags
+            descriptionTextView.text = event?.fields.description
+        }
+        
+        if let _ = eventImage{
+            eventImageView.image = eventImage?.image
+        }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onBackToEventListButtonClick(_ sender: Any) {
+        guard let delegate = delegate else { return }
+        delegate.willGoBack()
+        self.dismiss(animated: true, completion: nil)
     }
-    */
 
 }

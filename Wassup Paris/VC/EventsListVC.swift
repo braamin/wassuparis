@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 enum Result<Value> {
     case success(Value)
@@ -16,97 +17,144 @@ enum Result<Value> {
 class EventsListVC: UIViewController {
 
     @IBOutlet weak var DateFilterLabel: UILabel!
-    @IBOutlet weak var FiltersLabel: UILabel!
+    @IBOutlet weak var SortFieldsSegmentedControl: UISegmentedControl!
+    @IBOutlet weak var SortBySegmentedControl: UISegmentedControl!
     @IBOutlet weak var EventsTableView: UITableView!
+    @IBOutlet weak var EventsCountLabel: UILabel!
+    @IBOutlet weak var SortingTopConstraint: NSLayoutConstraint!
     
     var eventsDatasource: EventsDatasource?
+    var zoomTransitionManager: ZoomTransitionManager?
+    var nhits: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         eventsDatasource = EventsDatasource()
+        eventsDatasource?.delegate = self
         EventsTableView.dataSource = eventsDatasource
+        EventsTableView.delegate = self
         EventsTableView.register(UINib(nibName: "EventCell", bundle: nil), forCellReuseIdentifier: "EventCellNib")
         
-        let urlParams = ["dataset":"evenements-a-paris"]
+        updateTableView(_atInit: true)
+    }
+    
+    @IBAction func onSortFieldsClick(_ sender: Any){
+        eventsDatasource?.updateParam(for: SortFieldsSegmentedControl.selectedSegmentIndex, _direction: SortBySegmentedControl.selectedSegmentIndex)
         
-        getEvents(for: urlParams){ (result) in
+        updateTableView(_atInit: true)
+    }
+    
+    @IBAction func onEditDateFilterButtonClick(_ sender: Any) {
+        let datePopover = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "CalendarVC") as! CalendarVC
+        datePopover.delegate = self
+        datePopover.selectedDate = eventsDatasource?.urlParam.dateEndFilter.referenceDate
+        datePopover.modalPresentationStyle = .overCurrentContext
+        datePopover.modalTransitionStyle = .crossDissolve
+        self.present(datePopover, animated: true, completion: nil)
+    }
+    
+    @IBAction func onEditFiltersButtonClick(_ sender: Any) {
+        self.SortingTopConstraint.constant = self.SortingTopConstraint.constant == 0 ? -60 : 0
+        UIView.animate(withDuration: 0.4, animations: {
+            self.view.layoutIfNeeded()
+        })
+    }
+    
+    func updateTableView(_atInit: Bool){
+        eventsDatasource!.getEvents(_atInit: _atInit){ (result) in
             switch result {
             case .success(let eventsDataset):
-                self.eventsDatasource!.fillUp(with: eventsDataset.records)
+                self.EventsCountLabel.text = String(eventsDataset.nhits) + " résultat(s)"
                 self.EventsTableView.reloadData()
             case .failure(let error):
                 fatalError(error.localizedDescription)
             }
         }
-        // Do any additional setup after loading the view.
     }
-    
-    
-    func getEvents(for queryItems:[String:String], completion: ((Result<EventsDataset>) -> Void)?){
-        var urlComponents = URLComponents()
-        urlComponents.scheme = "https"
-        urlComponents.host = "opendata.paris.fr"
-        urlComponents.path = "/api/records/1.0/search/"
+
+}
+
+extension EventsListVC: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let cell = tableView.cellForRow(at: indexPath) as? EventCell else { return }
         
-        urlComponents.queryItems = []
+        UIView.animate(withDuration: 0.2, animations: {
+            cell.EventInfosView.alpha = 0
+        }, completion: { (disappeared) in
+            let cardViewFrame = cell.EvenContainerView.superview!.convert(cell.EvenContainerView.frame, to: nil)
+            let copyOfCardView = UIImageView(frame: cardViewFrame)
+            copyOfCardView.image = cell.EventImageView.image
+            copyOfCardView.contentMode = .scaleAspectFill
+            copyOfCardView.clipsToBounds = true
+            copyOfCardView.layer.cornerRadius = 12
+            self.view.addSubview(copyOfCardView)
+            cell.EventImageView.isHidden = true
+            
+            self.zoomTransitionManager = ZoomTransitionManager(cardView: copyOfCardView, cardViewFrame: cardViewFrame, cell: cell)
+            
+            UIView.animate(withDuration: 0.4, animations: {
+                copyOfCardView.layer.cornerRadius = 0
+                copyOfCardView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height/2)
+            }, completion: { (expanded) in
+                let eventDetailsVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "EventDetailsVC") as! EventDetailsVC
+                eventDetailsVC.modalPresentationStyle = .overCurrentContext
+                eventDetailsVC.modalTransitionStyle = .crossDissolve
+                eventDetailsVC.delegate = self
+                eventDetailsVC.eventImage = self.zoomTransitionManager?.cardView
+                eventDetailsVC.event = cell.event
+                self.present(eventDetailsVC, animated: true, completion: nil)
+            })
+        })
         
-        for queryItem in queryItems{
-            let datasetItem = URLQueryItem(name: queryItem.key, value: queryItem.value)
-            urlComponents.queryItems?.append(datasetItem)
+        
+    }
+}
+
+extension EventsListVC: AnimatedCellNavigationDelegate {
+    func willGoBack() {
+        UIView.animate(withDuration: 0.4, animations: {
+            guard self.zoomTransitionManager != nil else {return}
+            self.zoomTransitionManager!.cardView.frame = self.zoomTransitionManager!.cardViewFrame
+            self.zoomTransitionManager!.cardView.layer.cornerRadius = 12
+        }) { (shrinked) in
+            self.zoomTransitionManager?.cell.EventImageView.isHidden = false
+            self.zoomTransitionManager?.cardView.removeFromSuperview()
+            UIView.animate(withDuration: 0.2, animations: {
+                self.zoomTransitionManager?.cell.EventInfosView.alpha = 1
+            })
         }
-        
-        guard let url = urlComponents.url else { fatalError("Could not create URL from components") }
-        
-        var request = URLRequest(url: url)
-        request.httpMethod = "GET"
-        
-        let config = URLSessionConfiguration.default
-        let session = URLSession(configuration: config)
-        let task = session.dataTask(with: request) { (responseData, response, responseError) in
-            DispatchQueue.main.async {
-                if let error = responseError {
-                    completion?(.failure(error))
-                } else if let jsonData = responseData {
-                    // Now we have jsonData, Data representation of the JSON returned to us
-                    // from our URLRequest...
-                    print(jsonData)
-                    // Create an instance of JSONDecoder to decode the JSON data to our
-                    // Codable struct
-                    let decoder = JSONDecoder()
-                    
-                    do {
-                        // We would use Post.self for JSON representing a single Post
-                        // object, and [Post].self for JSON representing an array of
-                        // Post objects
-                        let eventsDataset = try decoder.decode(EventsDataset.self, from: jsonData)
-                        completion?(.success(eventsDataset))
-                    } catch {
-                        completion?(.failure(error))
-                    }
-                } else {
-                    let error = NSError(domain: "", code: 0, userInfo: [NSLocalizedDescriptionKey : "Data was not retrieved from request"]) as Error
-                    completion?(.failure(error))
-                }
+    }
+}
+
+extension EventsListVC: GetMoreDataDelegate {
+    func getMoreData() {
+        if let _ = nhits, let _ = eventsDatasource {
+            if(eventsDatasource!.eventList.count < nhits!){
+                eventsDatasource?.getMoreData()
+                updateTableView(_atInit: false)
             }
         }
-        
-        task.resume()
+    }
+}
+
+extension EventsListVC: DateCallbackDelegate {
+    func setDate(for _tag: Int, at _date: Date) {
+        switch _tag{
+        case 0:
+            eventsDatasource?.updateParam(for: .start, with: .beforeGivenDay, at: _date)
+        case 1:
+            eventsDatasource?.updateParam(for: .start, with: .onGivenDayOnly, at: _date)
+        case 2:
+            eventsDatasource?.updateParam(for: .start, with: .afterGivenDay, at: _date)
+        default:
+            eventsDatasource?.updateParam(for: .start, with: .onGivenDayOnly, at: _date)
+        }
+        updateTableView(_atInit: true)
     }
     
-    @IBAction func onEditDateFilterButtonClick(_ sender: Any) {
+    func resetDate() {
+        eventsDatasource?.resetDateFilters()
+        updateTableView(_atInit: true)
     }
-    
-    @IBAction func onEditFiltersButtonClick(_ sender: Any) {
-    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
